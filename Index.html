@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <main>
+     <div class="cards">
+        <div class="card-front">
+            <img src="images/bg-card-front.png" alt="" class="bg-card-front">
+            <img src="images/card-logo.svg" alt="" class="card-logo">
+            <span class="cardholder">JANE APPLESEED</span>
+            <span class="cardnumber">0000 0000 0000 0000</span>
+            <span class="card-expiry-date"><span class="card-expiry-date-MM">00</span><span class="slash">/</span><span class="card-expiry-date-YY">00</span></span>
+        </div>
+
+        <div class="card-back">
+            <img src="images/bg-card-back.png" alt="" class="bg-card-back">
+            <span class="card-cvc">000</span>
+        </div>
+     </div>
+     <form class="form" action="">
+        <label for="input-cardholder">CARDHOLDER</label>
+        <input type="text" placeholder="e.g. Jane Appleseed" id="input-cardholder" maxlength="19" >
+        <p class="error">Can't be blank</p>
+        <label for="input-cardnumber">CARD NUMBER</label>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="input-cardnumber" maxlength="19">
+        <p class="error">Can't be blank</p>
+        <div class="form-exp-date-cvc">
+         <div class="form-exp-date">
+          <label for="exp-date">EXP. DATE (MM/YY)</label>
+          <input type="number" min="01" step="1" max="12" maxlength="2" placeholder="MM" class="input-exp-date-MM">
+          <input type="number" min="23" step="1" max="29" maxlength="2" placeholder="YY" class="input-exp-date-YY">
+          <p class="error">Can't be blank</p>
+         </div>
+         <div class="form-cvc">
+          <label for="input-cvc">CVC</label>
+          <input type="text" placeholder="e.g. 123" class="input-cvc " maxlength="3">   
+          <p class="error">Can't be blank</p>
+         </div>
+        </div>
+        <button class="submit" type="button">Confirm</button>
+     </form>
+    </main>
+</body>
+<script src="Script.js"></script>
+</html>

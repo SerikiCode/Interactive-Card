@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --lightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkGrayishViolet: hsl(278, 68%, 11%);
+    --activeInputBorder: hsl(278, 94%, 30%);
+    --inactiveInputBorder: hsl(249, 99%, 64%);
+    --errorColor: hsl(0, 100%, 66%);
+    --fontSize:  clamp(11px, 1.5vw, 18px);;
+    --fontFamily: Space Grotesk;
+}
+
+
+
+body{
+    display: flex;
+    align-items: center;
+    
+    color: var(--white);
+    font-family: var(--fontFamily);
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: clamp(32vw, 200px, 484px) 100%;
+  
+}
+
+body{
+    height: 100vh;
+}
+
+main{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+
+    
+
+
+.card-front{
+        margin-bottom: clamp(30px, 3vw, 35px);
+        margin-left: 9vw;
+}
+
+.card-back{
+    margin-left: 14vw;
+    
+}
+
+.card-front, .card-back{
+    position: relative;
+    width: min-content;
+    max-width: revert;
+}
+    
+.card-front > :not(.bg-card-front), .card-back > :not(.bg-card-back){
+    position: absolute;
+}
+
+.bg-card-front, .bg-card-back{
+        width: clamp(36vw, 260px, 447px)
+        
+}
+
+.card-logo{
+    width: clamp(42px, 7vw, 84px);
+    top: clamp(20px, 2.5vw, 30px);
+}
+
+.cardnumber{
+    bottom: clamp(40px, 5vw, 60px);
+    font-size: clamp(16px, 40px, 2.5vw);
+    letter-spacing: clamp(1px, 1vw, 2px);    
+}
+
+.card-expiry-date{
+    right: 30px;
+}
+
+
+
+.cardholder, .card-expiry-date{
+   font-size: var(--fontSize);
+   bottom: clamp(12px, 1.3vw, 30px);
+   letter-spacing: 2px;
+}
+
+.cardnumber, .cardholder, .card-logo{
+    left: clamp(20px, 2.5vw, 30px)
+}
+
+.card-cvc{
+    font-size: var(--fontSize);
+    bottom: clamp(70px, 9.7vw, 114px);
+    right: clamp(38px, 5vw, 60px);
+    letter-spacing: 2px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-inline: clamp(20px, 5vw, 90px) clamp(30px,7vw, 100px);
+    font-size:var(--fontSize);
+
+}
+
+
+
+
+
+
+button{
+    font-size: var(--fontFamily);
+    padding-block: clamp(5px, 1vw, 12px);
+    border-radius: 7px;
+    border: none;
+    background-color: var(--veryDarkGrayishViolet);
+    color: var(--white);
+    
+    margin-top: clamp(3px, 1vw, 10px);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(278, 68%, 20%);
+}
+
+.complete-icon{
+    width: 7vw;
+    display: block;
+    margin-inline: auto;
+
+}
+
+.thank-you{
+    font-size: clamp(16px, 40px, 2.5vw);
+    letter-spacing: 2px;   
+    color: var(--veryDarkGrayishViolet);
+    font-weight: 600;
+    margin:30px auto 10px auto;
+
+}
+
+.message-complete{
+    font-size: clamp(10px, 2vw, 20px);
+    color: var(--darkGrayishViolet);
+    margin: 0 auto 30px auto;
+    font-weight: 500;
+}
+
+@media (max-width: 550px){
+    body{
+        background-image: url(images/bg-main-mobile.png);
+        background-size:contain;
+        height: auto;
+    }
+
+    main{
+        display: unset;
+        width: 100vw;
+        
+    }
+
+    
+    .bg-card-front, .bg-card-back{
+        width: clamp(180px, 74vw, 400px);
+
+    }
+
+    .cards{
+        position: relative;
+        
+    }
+
+    
+    .card-back{
+        position: absolute;    
+        top: clamp(20px, 9vw, 50px);
+        right: clamp(10px, 5vw, 30px);
+        z-index: -1;
+    }
+
+    .card-front{
+        margin-top: clamp(87px, 32vw, 174px);
+        margin-left: clamp(20px, 7vw, 40px);
+    }
+
+    .card-logo{
+        width: clamp(35px, 13vw, 70px);
+        top: clamp(15px, 5vw, 30px);
+        left: clamp(15px, 5vw, 30px);
+    }
+
+    .card-cvc{
+        bottom: clamp(50px, 19.4vw, 105px);
+        right: clamp(27px, 10vw, 55px);
+        font-size: clamp(10px, 3.5vw, 20px);
+    }
+
+    .cardnumber{
+        font-size: clamp(14px, 5vw, 27px);
+        bottom: clamp(35px, 13vw, 70px);
+        left: clamp(15px, 5vw, 30px);
+    }
+
+    .cardholder, .card-expiry-date{
+        font-size: clamp(10px, 3.5vw, 20px);
+        bottom: clamp(15px, 5vw, 30px);
+        
+    }
+
+    .cardholder{
+        left: clamp(15px, 5vw, 30px);
+    }
+
+    .card-expiry-date{
+        right: clamp(15px, 5vw, 30px);
+    }
+
+    form{
+                
+        display: flex;
+        margin-inline:20px;
+        font-size: clamp(10px, 3.5vw, 20px);
+        margin-top: 30px;
+    }
+
+    
+
+    button{
+        font-size: clamp(20px, 3.5vw, 20px);
+        padding-block: 15px;
+    }.complete-icon{
+        width: clamp(90px, 7vw, 100px);
+        display: block;
+        margin-inline: auto;
+    
+    }
+    
+    .thank-you{
+        font-size: clamp(35px, 4vw, 50px);
+        letter-spacing: 2px;   
+        color: var(--veryDarkGrayishViolet);
+        font-weight: 600;
+        margin:30px auto 10px auto;
+    
+    }
+    
+    .message-complete{
+        font-size: clamp(20px, 2vw, 60px);
+        color: var(--darkGrayishViolet);
+        margin: 0 auto 30px auto;
+        font-weight: 500;
+    }
+    
+
+
+}
+
