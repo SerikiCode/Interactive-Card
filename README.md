@@ -12,3 +12,5 @@ JavaScript
 2. selectionEnd property to create an automatic space after every 4 digits inputted as cardnumber. Fun!
 3. The window localStorage property
 4. The array map() method and several eventlisteners.
+
+Check out the project in this link: https://rainbow-pie-a9a18f.netlify.app/
