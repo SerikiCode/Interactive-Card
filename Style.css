@@ -1,6 +1,6 @@
 /*I have used the clamp() method copiously for the styling to crack the hard nut of responsiveness*/
 /*I also set the width of cards' divs to min-content in order to be a perfect fit for the cards' background images which are the largest content of the divs */
-
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -15,7 +15,7 @@
     --activeInputBorder: hsl(278, 94%, 30%);
     --inactiveInputBorder: hsl(249, 99%, 64%);
     --errorColor: hsl(0, 100%, 66%);
-    --fontSize:  clamp(11px, 1.5vw, 18px);;
+    --fontSize:  clamp(11px, 1.5vw, 30px);
     --fontFamily: Space Grotesk;
 }
 
@@ -26,7 +26,7 @@ body{
     align-items: center;
     color: var(--white);
     font-family: var(--fontFamily);
-    background-image: url(Images/bg-main-desktop.png);
+    background-image: url(images/bg-main-desktop.png);
     background-repeat: no-repeat;
     background-size: clamp(32vw, 200px, 484px) 100%;
 }
@@ -84,13 +84,13 @@ img{
 }
 
 .cardnumber{
-    bottom: clamp(40px, 5vw, 60px);
-    font-size: clamp(16px, 40px, 2.5vw);
+    bottom: clamp(40px, 5vw, 90px);
+    font-size: clamp(16px, 2.35vw, 70px);
     letter-spacing: clamp(1px, 1vw, 2px);    ;  
 }
 
 .card-expiry-date{
-    right: 30px;
+    right: 35px;
 }
 
 .cardholder, .card-expiry-date{
@@ -100,13 +100,13 @@ img{
 }
 
 .cardnumber, .cardholder, .card-logo{
-    left: clamp(20px, 2.5vw, 30px)
+    left: clamp(20px, 2.5vw, 50px)
 }
 
 .card-cvc{
     font-size: var(--fontSize);
-    bottom: clamp(65px, 9.2vw, 114px);
-    right: clamp(38px, 5vw, 60px);
+    bottom: clamp(65px, 9.25vw, 200px);
+    right: clamp(38px, 5vw, 80px);
     letter-spacing: 2px;
 }
 
@@ -121,8 +121,8 @@ form{
 label{
     display: block;
     color: var(--veryDarkGrayishViolet);
-    font-weight: 600;
-    
+    font-weight:bolder !important
+     
 }
 
 input{
@@ -133,7 +133,7 @@ input{
     padding: clamp(3px, 0.7vw, 10px) 0 clamp(3px, 0.7vw, 10px) clamp(4px, 1vw, 15px);
     margin-block: clamp(5px, 0.7vw, 10px) 0;
     color: var(--veryDarkGrayishViolet);
-    font-weight: 600;
+    font-weight: 500;
     
 }
 
